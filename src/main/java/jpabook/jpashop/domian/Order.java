@@ -14,6 +14,11 @@ public class Order {
     @Column(name = "ORDER_ID")
     private Long id;
 
+    private String createBy;
+    private LocalDateTime createDate;
+    private String lastModifiedBy;
+    private LocalDateTime lastModifiedDate;
+
     @ManyToOne
     @JoinColumn(name = "MEMBER_ID")
     private Member member;

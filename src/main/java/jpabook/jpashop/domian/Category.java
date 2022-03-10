@@ -1,6 +1,7 @@
 package jpabook.jpashop.domian;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +11,11 @@ public class Category {
     @Id
     @GeneratedValue
     private Long id;
+
+    private String createBy;
+    private LocalDateTime createDate;
+    private String lastModifiedBy;
+    private LocalDateTime lastModifiedDate;
 
     @ManyToOne
     @JoinColumn(name = "PARENT_ID")

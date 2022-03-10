@@ -1,6 +1,7 @@
 package jpabook.jpashop.domian;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +16,11 @@ public class Member {
     private String city;
     private String street;
     private String zipcode;
+
+    private String createBy;
+    private LocalDateTime createDate;
+    private String lastModifiedBy;
+    private LocalDateTime lastModifiedDate;
 
     @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
