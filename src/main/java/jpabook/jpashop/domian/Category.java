@@ -17,7 +17,7 @@ public class Category {
     private String lastModifiedBy;
     private LocalDateTime lastModifiedDate;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARENT_ID")
     private Category parent;
 
